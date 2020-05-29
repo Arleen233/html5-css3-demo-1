@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #eee;
+        }
+
+        #baGua-wrap {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        @keyframes circle {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        #baGua {
+            position: relative;
+            height: 400px;
+            width: 400px;
+            border-radius: 50%;
+            overflow: hidden;
+            animation: circle 10s infinite linear;
+        }
+
+        @media (max-width:500px) {
+            #baGua {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        #baGua>div:first-child {
+            position: absolute;
+            width: 200px;
+            height: 100%;
+            background: #000;
+        }
+
+        @media (max-width:500px) {
+            #baGua>div:first-child {
+                width: 100px;
+            }
+        }
+
+        #baGua>div:nth-child(2) {
+            position: absolute;
+            left: 50%;
+            width: 200px;
+            height: 100%;
+            background: #fff;
+        }
+
+        @media (max-width:500px) {
+            #baGua>div:nth-child(2) {
+                width: 100px;
+            }
+        }
+
+        #baGua>div:nth-child(3) {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            left: 50%;
+            margin-left: -100px;
+            background: #000;
+        }
+
+        @media (max-width:500px) {
+            #baGua>div:nth-child(3) {
+                width: 100px;
+                height: 100px;
+                margin-left: -50px;
+            }
+        }
+
+        #baGua>div:nth-child(4) {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            left: 50%;
+            margin-left: -100px;
+            bottom: 0;
+            border-radius: 50%;
+            background: #fff;
+        }
+
+        @media (max-width:500px) {
+            #baGua>div:nth-child(4) {
+                width: 100px;
+                height: 100px;
+                margin-left: -50px;
+            }
+        }
+
+        #baGua>div:nth-child(5) {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            left: 50%;
+            margin-left: -25px;
+            border-radius: 50%;
+            background: #fff;
+            top: 75px;
+        }
+
+        @media (max-width:500px) {
+            #baGua>div:nth-child(5) {
+                width: 25px;
+                height: 25px;
+                margin-left: -12.5px;
+                top: 35.25px;
+            }
+        }
+
+        #baGua>div:nth-child(6) {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            left: 50%;
+            margin-left: -25px;
+            bottom: 75px;
+            background: #000;
+        }
+
+        @media (max-width:500px) {
+            #baGua>div:nth-child(6) {
+                width: 25px;
+                height: 25px;
+                margin-left: -12.5px;
+                bottom: 35.25px;
+            }
+        }
+
+        #baGua-description {
+            margin-top: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="baGua-wrap">
+        <div id="baGua">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="baGua-description">道可道，非常道。</div>
+    </div>
+
+</body>
+
+</html>
